@@ -167,7 +167,35 @@ require('lazy').setup({
   --    Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
-  -- { import = 'custom.plugins' },
-}, {})
+  { import = 'custom.plugins' },
+},
+{  ui = {
+  -- Temporary fix for some NerdFont symbols until PragmataPro gets patched.
+    icons = {
+    cmd = " ",
+    config = "",
+    event = "",
+    ft = " ",
+    init = " ",
+    import = " ",
+    keys = " ",
+    lazy = "鈴 ",
+    loaded = "●",
+    not_loaded = "○",
+    plugin = " ",
+    runtime = " ",
+    require = " ",
+    source = " ",
+    start = "",
+    task = "✔ ",
+    list = {
+      "●",
+      "➜",
+      "★",
+      "‒",
+    },
+  },
+}
+})
 
 -- vim: ts=2 sts=2 sw=2 et
