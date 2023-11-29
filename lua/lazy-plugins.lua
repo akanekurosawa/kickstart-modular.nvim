@@ -89,15 +89,27 @@ require('lazy').setup({
       end,
     },
   },
-
   {
-    -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
+    "tiagovla/tokyodark.nvim",
+    lazy = false,
     priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'onedark'
+    opts = {
+          -- custom options here
+    },
+    config = function(_, opts)
+        require("tokyodark").setup(opts) -- calling setup is optional
+        vim.cmd [[colorscheme tokyodark]]
     end,
   },
+
+--  {
+--    "folke/tokyonight.nvim",
+--    lazy = false,
+--    priority = 1000,
+--    config = function()
+--      vim.cmd([[colorscheme tokyonight]])
+--    end,
+--  },
 
   {
     -- Set lualine as statusline
@@ -105,8 +117,8 @@ require('lazy').setup({
     -- See `:help lualine.txt`
     opts = {
       options = {
-        icons_enabled = false,
-        theme = 'onedark',
+        icons_enabled = true,
+        theme = 'tokyodark',
         component_separators = '|',
         section_separators = '',
       },
