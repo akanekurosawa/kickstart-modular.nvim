@@ -180,34 +180,6 @@ require('lazy').setup({
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
   { import = 'custom.plugins' },
-},
-{  ui = {
-  -- Temporary fix for some NerdFont symbols until PragmataPro gets patched.
-    icons = {
-    cmd = " ",
-    config = "",
-    event = "",
-    ft = " ",
-    init = " ",
-    import = " ",
-    keys = " ",
-    lazy = "鈴 ",
-    loaded = "●",
-    not_loaded = "○",
-    plugin = " ",
-    runtime = " ",
-    require = " ",
-    source = " ",
-    start = "",
-    task = "✔ ",
-    list = {
-      "●",
-      "➜",
-      "★",
-      "‒",
-    },
-  },
-}
 })
 
 -- vim: ts=2 sts=2 sw=2 et
