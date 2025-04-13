@@ -1,8 +1,12 @@
 return{
 {
   'stevearc/oil.nvim',
-  opts = {},
+  opts = {
+    keymaps = {
+      ["<C-l>"] = false,
+    },
+  },
   -- Optional dependencies
-  dependencies = { "akanekurosawa/nvim-web-devicons" },
+  dependencies = { "nvim-tree/nvim-web-devicons" },
 }
 }

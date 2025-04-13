@@ -25,13 +25,10 @@ local wk = require("which-key")
 vim.keymap.set('n', '<leader>ws', '<C-w>s')
 vim.keymap.set('n', '<leader>wv', '<C-w>v')
 
-wk.register({
-  w = {
-    s = { "[s]plit" },
-    v = { "[v]ertical split" },
-  },
-}, { prefix = "<leader>" })
-
+wk.add({
+  { "<leader>ws", desc = "[s]plit" },
+  { "<leader>wv", desc = "[v]ertical split" },
+})
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })

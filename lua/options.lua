@@ -39,4 +39,9 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
+if vim.g.neovide then
+  vim.g.neovide_cursor_animation_length = 0.03
+  vim.g.neovide_cursor_trail_size = 0.5
+end
+
 -- vim: ts=2 sts=2 sw=2 et
